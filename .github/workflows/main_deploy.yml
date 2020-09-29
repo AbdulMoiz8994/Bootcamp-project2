@@ -26,15 +26,18 @@ jobs:
         with:
           version: 12
 
-      - name: installing npm 
-        run: |
-           npm install # Install Dependencies
-           CI=false npm run build # CI=false to ignore warnings
+      - name: Github action for yarn
+        uses: Borales/actions-yarn@v2.1.0
+        with:
+          # yarn build/npm install/yarn install
+          cmd: install
           
+      - name: creating build
+        run: npm build
         
       - name: installing surge
         run: npm install -g surge
         
       # Runs a set of commands using the runners shell
       - name: deploying on surge
-        run: surge ./build http://deadpan-burst.surge.sh/ --token ${{ secrets.SURGE_TOKEN6 }}
+        run: surge ./build http://deadpan-burst.surge.sh/  --token ${{ secrets.SURGE_TOKEN6 }}
