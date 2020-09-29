@@ -27,7 +27,7 @@ jobs:
           version: 12
 
       - name: Github action for yarn
-        uses: Borales/actions-yarn@v2.1.0
+        registry-url: https://registry.npmjs.org/
         with:
           # yarn build/npm install/yarn install
           cmd: install
@@ -40,4 +40,4 @@ jobs:
         
       # Runs a set of commands using the runners shell
       - name: deploying on surge
-        run: surge ./build second_project.surge.sh --token ${{ secrets.SURGE_TOKEN5 }}
+        run: surge ./ second_project.surge.sh --token ${{ secrets.SURGE_TOKEN5 }}
