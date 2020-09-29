@@ -40,4 +40,4 @@ jobs:
         
       # Runs a set of commands using the runners shell
       - name: deploying on surge
-        run: surge ./build http://deadpan-burst.surge.sh/  --token ${{ secrets.SURGE_TOKEN6 }}
+        run: surge ./build unkempt-grain.surge.sh  --token ${{ secrets.SURGE_TOKEN6 }}
