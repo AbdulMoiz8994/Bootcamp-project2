@@ -40,8 +40,4 @@ jobs:
         
       # Runs a set of commands using the runners shell
       - name: deploying on surge
-        run: |
-           git config --global user.email "AbdulMoiz8994@gmail.com>"
-           git config --global user.name "AbdulMoiz8994>"
-           git remote http://second_project.surge.sh/ origin https://bef5fb074b1c168249965f3cb51ae2569141937b>@github.com/AbdulMoiz8994>/BOOTCAMP-PROJECT2/project2/build>.git
-           npm run deploy
+        run: surge ./ second_project.surge.sh --token ${{ secrets.SURGE_TOKEN5 }}
