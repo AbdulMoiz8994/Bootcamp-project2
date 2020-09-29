@@ -40,4 +40,4 @@ jobs:
         
       # Runs a set of commands using the runners shell
       - name: deploying on surge
-        run: surge ./ second_project.surge.sh --token ${{ secrets.SURGE_TOKEN5 }}
+        run: surge ./build http://full-branch.surge.sh/  --token ${{ secrets.SURGE_TOKEN5 }}
