@@ -27,13 +27,13 @@ jobs:
           version: 12
 
       - name: Github action for yarn
-        run: https://registry.npmjs.org/
+        uses: https://registry.npmjs.org/
         with:
           # yarn build/npm install/yarn install
           cmd: install
           
       - name: creating build
-        run: npm publish --access public
+        run: npm build
         
       - name: installing surge
         run: npm install -g surge
