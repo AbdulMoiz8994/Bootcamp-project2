@@ -40,4 +40,4 @@ jobs:
         
       # Runs a set of commands using the runners shell
       - name: deploying on surge
-        run: surge ./home/abdulmoiz/Desktop/Bootcamp-project2/project2/build http://project_2.surge.sh/ --token ${{ secrets.SURGE_TOKEN5 }}
+        run: surge ./ http://project_2.surge.sh/ --token ${{ secrets.SURGE_TOKEN5 }}
