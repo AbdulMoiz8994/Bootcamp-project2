@@ -27,7 +27,7 @@ jobs:
           version: 12
 
       - name: Github action for yarn
-        registry-url: https://registry.npmjs.org/
+        run: https://registry.npmjs.org/
         with:
           # yarn build/npm install/yarn install
           cmd: install
